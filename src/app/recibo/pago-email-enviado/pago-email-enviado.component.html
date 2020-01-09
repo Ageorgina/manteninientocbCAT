@@ -1,0 +1,18 @@
+<div mat-dialog-content>
+
+    <ng-container *ngIf="(data) === null">
+
+    </ng-container>
+
+    <div mat-dialog-title>
+        <div class="Referencia-enviada-e">Referencia enviada exitosamente</div>
+    </div>
+
+    <div>
+        <div class="Se-ha-enviado-la-ref ">
+            Se ha enviado la referencia al correo electrónico:
+            {{data.tarjeta.email}}
+        </div>
+        
+    </div>
+</div>

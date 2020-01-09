@@ -1,0 +1,25 @@
+<samp class="Prximo-recibo-a-pag">Próximo recibo a pagar:</samp>
+<div class="Rectangle-border">
+
+    <table>
+        <tr>
+            <td class="Fraccion">
+                <div class="Fraccion">Fracción {{recibo.fraccion}}</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="Monto"> {{recibo?.importe | currency }} {{recibo?.moneda }}</td>
+            <td>
+                <a mat-stroked-button class="Rectangle-Copy-7"  (click)="openDialog()">
+                    <samp class="Pagar"> PAGAR </samp>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Periodo">
+                Periodo del {{recibo?.inicioVigencia | fechas |date:"dd-MM-yyyy" }} al {{recibo?.fechaVencimiento | fechas |date:"dd-MM-yyyy" }}
+            </td>
+        </tr>
+    </table>
+
+</div>

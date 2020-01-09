@@ -1,0 +1,72 @@
+<div mat-dialog-content>
+    <ng-container *ngIf="(data) === null || (responseDetalleRecibo) === null">
+
+    </ng-container>
+
+    <div class="Prximo-recibo-a-pag" mat-dialog-title>Recibo # {{data.numeroRecibo}} </div>
+
+    <acme-datos-recibos [recibo]="recibo"></acme-datos-recibos>
+
+    <div>
+        <table>
+            <tr class="Rectangle-datos">
+                <td>
+                    <img src="assets/img/recibo.png" colspan="2" />
+                    <samp class="Datos-del-recibo"> Datos de la póliz</samp>
+                <td>
+
+            </tr>
+            <tr>
+                <td class="Key">No. de Póliza</td>
+                <td class="Value">{{data.numeroPoliza}}</td>
+            </tr>
+            <tr>
+                <td class="Key"> Ramo</td>
+                <td class="Value"> {{data.ramo.descRamo}}</td>
+            </tr>
+            <tr>
+                <td class="Key"> Forma de pago</td>
+                <td class="Value">{{data.formaPago.descFormaPago}}</td>
+            </tr>
+            <tr>
+                <td class="Key">Versión</td>
+                <td class="Value">{{data.versionPoliza}}</td>
+            </tr>
+            <tr>
+                <td class="Key"> Estatus de la póliza</td>
+                <td class="Value"> {{data.estatusPoliza}}</td>
+            </tr>
+            <tr>
+                <td class="Key"> Conducto de cobro</td>
+                <td class="Value"> {{data.canalCobro.descCanalCobro}}</td>
+            </tr>
+
+            <tr class="Rectangle-datos">
+                <td> <img src="assets/img/recibo.png" />
+                    <samp class="Datos-del-recibo"> Datos del recibo</samp></td>
+                <td>
+                    <a class="Ver-todos-los-recibo" (click)="openRecibos(data)">
+                        Ver todos los recibos
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="Key"> Estatus del recibo</td>
+                <td class="Value">{{data.estatusRecibo}}</td>
+            </tr>
+            <tr>
+                <td class="Key"> Fracción</td>
+                <td class="Value"> {{data.fraccion}}</td>
+            </tr>
+            <tr>
+                <td class="Key"> Periodo hasta</td>
+                <td class="Value"> {{data.inicioVigencia | fechas |date:"dd-MM-yyyy"}}</td>
+            </tr>
+            <tr>
+                <td class="Key"> Periodo desde</td>
+                <td class="Value">{{data.fechaVencimiento | fechas |date:"dd-MM-yyyy"}}</td>
+            </tr>
+        </table>
+    </div> 
+</div>

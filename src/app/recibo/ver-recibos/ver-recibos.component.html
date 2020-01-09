@@ -1,0 +1,77 @@
+<div>
+    <a class="Referencias-bancaria" routerLink="/recibo">
+        Consulta y pago de recibos /
+    </a>
+    <samp class="Nueva-referencia">Póliza #{{numeroPoliza}}</samp>
+</div>
+<div class="titulo">
+    <samp class="Recibos-de-la-pliza">Recibos de la póliza {{numeroPoliza}}</samp>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td>
+                <acme-datos-poliza [poliza]="poliza" ></acme-datos-poliza>
+            </td>
+            <td>
+                <acme-datos-recibos [recibo]="recibo"></acme-datos-recibos>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+  
+  
+      <ng-container matColumnDef="fraccion">
+        <th mat-header-cell *matHeaderCellDef class="Campo-key"> Fracción </th>
+        <td mat-cell *matCellDef="let element" class="Campo"> {{element.fraccion}} </td>
+      </ng-container>
+      <ng-container matColumnDef="noRecibo">
+        <th mat-header-cell *matHeaderCellDef class="Campo-key"> No. de recibo </th>
+        <td mat-cell *matCellDef="let element" class="No-recibo"> {{element.numeroRecibo}} </td>
+      </ng-container>
+      <ng-container matColumnDef="estatusRecibo">
+        <th mat-header-cell *matHeaderCellDef class="Campo-key"> Estatus del recibo </th>
+
+        <td mat-cell *matCellDef="let element" class="Campo"> 
+
+        <div *ngIf="element.estado.clvSubEstado  === 'CB'" class="Pagado">
+          <img src="assets/img/pagada.png">  {{element.estado.descApp}}
+        </div>
+        <div *ngIf="element.estado.clvSubEstado === 'PD'" class="Pendiente">
+            <img src="assets/img/pendiente-gris.png">  {{element.estado.descApp}}
+        </div>
+        <div *ngIf="element.estado.clvSubEstado ===  'EB'" class="Pendiente-exigible">
+          <img src="assets/img/group-blue.png">  {{element.estado.descApp}} 
+        </div>
+       </td>
+      </ng-container>
+
+      <ng-container matColumnDef="monto">
+        <th mat-header-cell *matHeaderCellDef class="Campo-key"> Monto </th>
+        <td mat-cell *matCellDef="let element" class="Monto"> {{element.importe | currency  }} </td>
+      </ng-container>
+      <ng-container matColumnDef="periodoDesde">
+        <th mat-header-cell *matHeaderCellDef class="Campo-key"> Periodo desde </th>
+        <td mat-cell *matCellDef="let element" class="Campo"> {{element.inicioVigencia  | fechas |date:"dd-MM-yyyy"}} </td>
+      </ng-container>
+      <ng-container matColumnDef="periodoHasta">
+        <th mat-header-cell *matHeaderCellDef class="Campo-key"> Periodo hasta </th>
+        <td mat-cell *matCellDef="let element" class="Campo"> {{element.fechaVencimiento| fechas |date:"dd-MM-yyyy" }}</td>
+      </ng-container>
+      <ng-container matColumnDef="conducto">
+        <th mat-header-cell *matHeaderCellDef class="Campo-key"> Conducto</th>
+        <td mat-cell *matCellDef="let element" class="Campo"> {{element.canalCobro.descCanalCobro }} </td>
+      </ng-container>
+  
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>

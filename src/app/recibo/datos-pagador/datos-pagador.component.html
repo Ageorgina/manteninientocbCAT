@@ -1,0 +1,37 @@
+<samp class="Datos-del-pago-a-rea">Datos del pago a realizar</samp>
+
+<div class="Rectangle">
+    <table>
+        <tr>
+            <td class="Recibo-1">Recibo # {{recibo?.numeroRecibo}} </td>
+            <td class="pago-MX ">{{recibo?.importe | currency }} {{recibo?.moneda }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="pago-USD">$ USD</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="Key">Contratante</td>
+            <td class="Key">No. de póliza</td>
+            <td class="Key">Ramo</td>
+        </tr>
+        <tr>
+            <td class="Value">{{recibo?.nombreContratante}}</td>
+            <td class="Value">{{recibo?.numeroPoliza}}</td>
+            <td class="Value">{{recibo?.ramo?.descRamo}}</td>
+        </tr>
+        <tr>
+            <td class="Key">Forma de pago</td>
+            <td class="Key">Periodo que cubre</td>
+            <td class="Key">Fracción</td>
+        </tr>
+        <tr>
+            <td class="Value">{{recibo?.formaPago?.descFormaPago}}</td>
+            <td class="Value-1"> {{recibo?.inicioVigencia | fechas |date:"dd-MM-yyyy" }} - {{recibo?.fechaVencimiento | fechas |date:"dd-MM-yyyy" }}
+            </td>
+            <td class="Value-1">{{recibo?.fraccion}}</td>
+        </tr>
+    </table>
+</div>

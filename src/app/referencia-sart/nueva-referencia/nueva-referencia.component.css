@@ -1,0 +1,81 @@
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+
+.Selecciona-el-tipo-d {
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #002e71;
+  }
+
+  .Para-pago-de-prima {
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4d4d4d;
+  }
+  .Pagar-desactivo {
+
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #747474;
+  }
+  .Rectangle-Copy-7-desactivo {
+    width: 164px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #bab9b9;
+  }
+
+  .Rectangle-Copy-7-activo {
+    width: 164px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #ff6f20;
+  }
+
+  .Pagar-activo {
+    width: 73px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: #ff6f20;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #ff6f20;
+}
+
+.Rectangle-modal {
+  width: 494px;
+  height: 334px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.17);
+  border: solid 1px #e7e7e7;
+  background-color: #ffffff;
+}

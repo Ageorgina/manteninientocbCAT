@@ -1,0 +1,82 @@
+<div class="Datos-de-la-tarjeta">
+    Datos de la tarjeta
+</div>
+
+<div class="Rectangle">
+    <form [formGroup]="tarjetaForm" (ngSubmit)="onPagar()">
+        <div>
+            <mat-form-field>
+                <mat-label>Banco</mat-label>
+                <mat-select [(ngModel)]="selectedBanco" name="banco" formControlName="banco">
+                    <mat-option *ngFor="let banco of bancos" [value]="banco.value">
+                        {{banco.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Meses sin intereses</mat-label>
+                <mat-select [(ngModel)]="selectedMeses" name="noMeses" formControlName="noMeses">
+                    <mat-option *ngFor="let noMeses of meses" [value]="noMeses.value">
+                        {{noMeses.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <a class="Opciones-MSI" (click)="onMeses()"> Opciones MSI</a>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Nombre titular" name="nombreTitular" formControlName="nombreTitular">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Número de la tarjeta" name="noTarjeta" formControlName="noTarjeta"
+                    maxlength="16">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput type='text' mask="00/00" formControlName="date">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="CVV" name="cvv" formControlName="cvv" maxlength="4">
+            </mat-form-field>
+        </div>
+
+        <div class="Compartir-referencia "> Compartir referencia por correo</div>
+
+        <div>
+            <mat-form-field>
+                <input matInput type='email'  placeholder='Correo electrónico' formControlName="email">
+            </mat-form-field>
+        </div>
+
+
+
+        <div>
+            <section>
+
+                <table>
+                    <tr>
+                        <td>
+                            <mat-checkbox [(ngModel)]="checked" name="politicas" formControlName="politicas">
+                            </mat-checkbox>
+                        </td>
+                        <td class="El-agente-de-seguros">
+                            {{politica}}</td>
+                    </tr>
+
+                </table>
+            </section>
+        </div>
+
+     
+
+
+        <button mat-raised-button class="Rectangle-Copy-7 " [disabled]="tarjetaForm.invalid">
+            <samp class="Pagar"> PAGAR</samp>
+        </button>
+    </form>
+</div>

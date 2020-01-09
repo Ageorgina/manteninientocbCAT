@@ -1,0 +1,109 @@
+.Datos-de-la-tarjeta {
+    width: 125px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+  }
+  .El-agente-de-seguros {
+    width: 382px;
+    height: 51px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3a3a3a;
+  }
+
+  .Rectangle-Copy-7 {
+    width: 414px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #ff6f20;
+  }
+
+  .Pagar {
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .Rectangle {
+    width: 414px;
+  }
+  .Opciones-MSI {
+    width: 79px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ff6f20;
+  }
+  .grid {
+    width: 10px;
+    height: 17px;
+  }
+
+
+  .example-month-picker .mat-calendar-period-button {
+    pointer-events: none;
+  }
+  
+  .example-month-picker .mat-calendar-arrow {
+    display: none;
+  }
+
+  .Compartir-referencia {
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+  }
+  .Rectangle-datos {
+    width: 454px;
+    height: 36px;
+    background-color: #f8f8f8;
+  }
+
+  
+  .Rectangle-Copy-7 {
+    width: 414px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #ff6f20;
+  }
+
+  .Pagar {
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }

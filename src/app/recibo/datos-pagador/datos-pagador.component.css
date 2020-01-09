@@ -1,0 +1,93 @@
+.Datos-del-pago-a-rea {
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+
+.Rectangle {
+    width: 659px;
+    height: 197px;
+    background-color: #f5f9ff;
+}
+.Recibo-1{
+    width: 176px;
+    height: 22px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+
+.pago-MX {
+    width: 94px;
+    height: 22px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+.pago-USD{
+    width: 150px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3a3a3a;
+}
+.fondo-Sin-Fin-mockup {
+    width: 1440px;
+    height: 800px;
+}
+.Key{
+    width: 160px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #979cae;
+}
+.Value{
+    width: 200px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+.Value-1{
+    width: 168px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #002e71;
+  }

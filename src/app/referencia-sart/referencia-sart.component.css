@@ -1,0 +1,69 @@
+.titulo {
+    width: 366px;
+    height: 33px;
+  }
+  .Pago-en-lnea {
+      width: 276px;
+      height: 33px;
+      font-family: OpenSans;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #002e71;
+    }
+    .-Personas {
+      width: 58.8px;
+      height: 22px;
+      font-family: OpenSans;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #b0b0b0;
+    }
+.Rectangle-Copy-7 {
+  width: 144px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #ff6f20;
+}
+.Pagar {
+    width: 117px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .Nueva-referencia {
+    width: 95px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  .Rectangle {
+    width: 168px;
+    height: 36px;
+    background-color: #ff6f20;
+  }
+  .Componet
+  {
+    align-self: right;
+  }

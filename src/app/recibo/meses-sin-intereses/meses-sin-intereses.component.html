@@ -1,0 +1,36 @@
+<div>
+  <div class="Campaas-meses-sin-i" mat-dialog-title> Campañas meses sin intereses</div>
+  <div mat-dialog-content>
+    <ng-container *ngIf="(campanias | async) === null">
+      <mat-spinner></mat-spinner>
+    </ng-container>
+    <mat-tab-group>
+      <mat-tab *ngFor="let tab of campanias | async">
+        
+        <ng-template mat-tab-label>{{tab.label}}</ng-template>
+
+        <div *ngIf="!tab.bancos" class="No-hay-campaas-de-m">
+          No hay campañas de meses sin intereses disponibles en el
+          momento
+        </div>
+        <mat-list>
+          <div *ngFor="let banco of tab.bancos">
+            <div class="Nombre-del-banco"> {{banco.name}}</div>
+            <mat-divider></mat-divider>
+            <div>
+              <img src="assets/img/shape.png">
+              <samp class="Meses"> Meses </samp>
+              <samp class="Sobretasa"> % Sobretasa</samp>
+            </div>
+            <mat-divider></mat-divider>
+            <div *ngFor="let data of banco.data">
+              <samp class="-meses"> {{data.meses}} Meses</samp>
+              <samp class="-sobretasa"> {{data.sobretasa}}</samp>
+              <mat-divider></mat-divider>
+            </div>
+          </div>
+        </mat-list>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

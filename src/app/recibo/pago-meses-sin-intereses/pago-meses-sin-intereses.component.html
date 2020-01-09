@@ -1,0 +1,26 @@
+<div>
+    <ng-container *ngIf="(data) === null">
+        <mat-spinner></mat-spinner>
+    </ng-container>
+
+    <div>
+        <form [formGroup]="mesesForm" (ngSubmit)="selectMeses()">
+            <table>
+                <tr class="Rectangle-datos">
+                    <td class="Meses">
+                        <img src="assets/img/shape.png"> Meses
+                    </td>
+                    <td class="Sobretasa">
+                        % Sobretasa
+                    </td>
+                    <td class="Importe">
+                        Importe
+                    </td>
+                </tr>
+            </table>
+            <button mat-raised-button class="Rectangle-Copy-7 " [disabled]="mesesForm.invalid">
+                <samp class="Pagar"> ELEGIR</samp>
+            </button>
+        </form>
+    </div>
+</div>

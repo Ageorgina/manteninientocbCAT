@@ -1,0 +1,49 @@
+<div>
+    <div class="Campaas-meses-sin-i" mat-dialog-title>
+
+        <div class="save-money ">
+            <img src="assets/img/save-money.png">
+        </div>
+
+    </div>
+    <div mat-dialog-content>
+
+
+        <div class="Referencia-creada-ex">Referencia creada exitosamente </div>
+        <div class="Recuerda-que-la-refe">Recuerda que la referencia generada tiene 72 horas de vigencia. </div>
+
+        <div class="Rectangle-Copy-4">
+            <div class="Datos-de-la-referenc"> <img src="assets/img/recibo.png"> Datos de la referencia</div>
+        </div>
+
+        <table>
+            <tr>
+                <td class="Key">No. de referencia</td>
+                <td class="Value">{{data.nombreContratante}}</td>
+            </tr>
+            <tr>
+                <td class="Key">Nombre de contratante</td>
+                <td class="Value">{{data.nombreContratante}}</td>
+            </tr>
+            <tr>
+                <td class="Key">Importe</td>
+                <td class="Value">{{data.importe | currency }} {{data.moneda }}</td>
+            </tr>
+            <tr>
+                <td class="Key">Fin de vigencia</td>
+                <td class="Value">{{data.fechaVencimiento | fechas |date:"dd-MM-yyyy" }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <button mat-stroked-button class="Rectangle-Copy-7" (click)="openDialog()">
+                        <samp class="Todos-los-recibos"> Compartir por correo</samp>
+                    </button>
+                    <button mat-stroked-button class="Rectangle-Copy-7-Naranja" (click)="openDialog()">
+                        <samp class="Pagar"> Descargar pdf</samp>
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>

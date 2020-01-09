@@ -1,0 +1,43 @@
+
+  .Rectangle {
+    width: 659px;
+    height: 124px;
+    background-color: #f5f9ff;
+  }
+
+ 
+  .Key {
+    width: 160px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #979cae;
+  }
+  .Value {
+    width: 200px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+  }
+  .Datos-de-la-pliza {
+
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+  }

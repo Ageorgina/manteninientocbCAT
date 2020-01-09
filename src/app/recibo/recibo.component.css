@@ -1,0 +1,69 @@
+.Titulo {
+    width: 366px;
+    height: 33px;
+  }
+.Button-row ,
+.Button-row a {
+  margin-right: 8px;
+}
+.Componet
+  {
+    justify-content: right;
+    align-items: right;
+    align-self: right;
+  }
+.Pago-en-lnea {
+      width: 276px;
+      height: 33px;
+      font-family: OpenSans;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #002e71;
+    }
+.-Personas {
+      width: 58.8px;
+      height: 22px;
+      font-family: OpenSans;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #b0b0b0;
+    }
+
+
+  .Rectangle-Copy-7 {
+    border-radius: 4px;
+    border: solid 1px #ff6f20;
+    background-color: #ffffff;
+  } 
+
+  .Rectangle {
+    width: 168px;
+    height: 36px;
+    background-color: #ff6f20;
+  }
+ 
+  .Buscar-cliente {
+    width: 95px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+ 
+  .mostrando {
+    width: 132px;
+    height: 21px;
+  }

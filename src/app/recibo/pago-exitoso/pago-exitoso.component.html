@@ -1,0 +1,84 @@
+<div mat-dialog-content>
+
+    <ng-container *ngIf="(data) === null">
+
+    </ng-container>
+
+    <div mat-dialog-title>
+        <img src="assets/img/save-money.png">
+        <div class="Pago-exitoso">¡Pago exitoso!</div>
+        <div class="Tu-nmero-de-cobro-l"> Tu número de cobro lo recibirás en un promedio de 48 días hábiles. Tu
+            comprbante ha sido enviado al correo mail@mail.com.</div>
+    </div>
+</div>
+
+<table>
+    <tr class="Rectangle">
+        <td>
+            <img src="assets/img/tarjeta.png" colspan="2" />
+            <samp class="Autorizacin-bancari"> Autorización bancaria</samp>
+        <td>
+    </tr>
+
+    <tr>
+        <td class="Key">Código de autorización</td>
+        <td class="Value">Código de autorización</td>
+    </tr>
+
+    <tr class="Rectangle">
+        <td>
+            <img src="assets/img/tarjeta.png" colspan="2" />
+            <samp class="Detalle-de-pago "> Detalle de pago</samp>
+        <td>
+    </tr>
+    <tr>
+        <td class="Key">No. de recibo</td>
+        <td class="Value">No. de recibo</td>
+    </tr>
+    <tr>
+        <td class="Key">No. Póliza</td>
+        <td class="Value">No. Póliza</td>
+    </tr>
+    <tr>
+        <td class="Key">Nombre del contratante</td>
+        <td class="Value">Nombre del contratante</td>
+    </tr>
+    <tr>
+        <td class="Key">Periodo que cubre</td>
+        <td class="Value">Periodo que cubre</td>
+    </tr>
+    <tr>
+        <td class="Key">Forma de pago</td>
+        <td class="Value">Forma de pago</td>
+    </tr>
+    <tr>
+        <td class="Key">Ramo</td>
+        <td class="Value">Ramo</td>
+    </tr>
+    <tr>
+        <td class="Key">Fracción</td>
+        <td class="Value">Fracción</td>
+    </tr>
+    <tr>
+        <td class="Key">Correo electrónico</td>
+        <td class="Value">Correo electrónico</td>
+    </tr>
+    <tr>
+        <td class="Key">Importe pesos</td>
+        <td class="Value">Importe pesos</td>
+    </tr>
+    <tr>
+        <td class="Key">Meses sin intereses</td>
+        <td class="Value">Meses sin intereses</td>
+    </tr>
+</table>
+
+
+<div>
+    <button mat-stroked-button class="RectangleEnviarCorreo" (click)="openDialogEnviarCorreo()">
+        <samp class="EnviarCorreo">Enviar por correo</samp>
+      </button>
+      <button mat-stroked-button class="RectangleDescargar" (click)="openDialogDescargar()">
+        <samp class="Descargar">Descargar comprobante</samp>
+      </button>
+</div>

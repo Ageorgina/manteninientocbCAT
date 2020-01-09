@@ -1,0 +1,55 @@
+<samp class="Datos-de-la-pliza">Datos de la póliza</samp>
+<div class="Rectangle">
+
+    <table>
+        <tr>
+            <td class="Key">
+                Contratante
+            </td>
+            <td class="Key">
+                No. de póliza
+            </td>
+            <td class="Key">
+                Ramo
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="Value">
+                 {{poliza?.nombreContratante}}
+            </td>
+            <td class="Value">
+                {{poliza?.numeroPoliza}}
+            </td>
+            <td class="Value">
+                {{poliza?.ramo?.descRamo}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="Key">
+                Forma de pago
+            </td>
+            <td class="Key">
+                Versión de póliza
+            </td>
+            <td class="Key">
+              
+            </td>
+        </tr>
+
+        <tr>
+            <td class="Value">
+                {{poliza?.formaPago?.descFormaPago}}
+            </td>
+            <td class="Value">
+                {{poliza?.versionPoliza}}
+            </td>
+            <td class="Value">
+              
+            </td>
+        </tr>
+    </table>
+
+</div>

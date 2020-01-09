@@ -1,0 +1,22 @@
+<div mat-dialog-content>
+
+    <ng-container *ngIf="(data) === null">
+
+    </ng-container>
+
+    <div mat-dialog-title>
+        <div class="Compartir-por-correo">Enviar comprobante</div>
+    </div>
+
+    <div>
+        <div class="Escribe-el-correo-el">Escribe el correo al cuál se enviará el comprobante:</div>
+        <form [formGroup]="emailForm" (ngSubmit)="onEnviarCorreo()">
+            <mat-form-field>
+                <input matInput type='email'  placeholder='Correo electrónico' formControlName="email">
+            </mat-form-field>
+            <button mat-stroked-button class="RectangleEnviarCorreo" >
+                <samp class="EnviarCorreo">Enviar por correo</samp>
+            </button>
+        </form>
+    </div>
+</div>

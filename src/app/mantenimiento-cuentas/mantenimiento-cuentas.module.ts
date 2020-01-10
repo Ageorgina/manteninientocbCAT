@@ -14,25 +14,31 @@ import { DatosPolizaComponent } from './datos-poliza/datos-poliza.component';
 import { DatosTarjetaAsignadaComponent } from './datos-tarjeta-asignada/datos-tarjeta-asignada.component';
 import { AsignacionTarjetaExitosaComponent } from './asignacion-tarjeta-exitosa/asignacion-tarjeta-exitosa.component';
 import { AsignacionTarjetaComponent } from './asignacion-tarjeta/asignacion-tarjeta.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [
-    MantenimientoCuentasComponent, 
+    MantenimientoCuentasComponent,
     ClienteComponent,
-     PolizaComponent, 
-     TarjetaAsignadaComponent, DatosPolizaComponent, DatosTarjetaAsignadaComponent, AsignacionTarjetaExitosaComponent, AsignacionTarjetaComponent],
+     PolizaComponent,
+     TarjetaAsignadaComponent,
+     DatosPolizaComponent,
+     DatosTarjetaAsignadaComponent,
+     AsignacionTarjetaExitosaComponent,
+     AsignacionTarjetaComponent],
   imports: [
     CommonModule,
-    MantenimientoCuentasRoutingModule,   
+    MantenimientoCuentasRoutingModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    NgbModule,
   ],
   providers: [
     CatalogosService,
     fakeBackendProvider
   ],
-  entryComponents:[
+  entryComponents: [
     TarjetaAsignadaComponent
   ]
 

@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mantenimiento-cuentas.component.css']
 })
 export class MantenimientoCuentasComponent implements OnInit {
+  nombrecliente = true;
+
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  nopoliza() {
+    this.nombrecliente = false;
+  }
+
+
+// fskr
 }

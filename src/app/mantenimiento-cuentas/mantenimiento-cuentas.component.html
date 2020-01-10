@@ -1,29 +1,35 @@
-<div class="titulo">
-    <samp class="Pago-en-lnea">Mantenimiento cuentas bancarias CAT </samp>
-    <samp class="-Personas">| Persona</samp>
-</div>
-
-<div>
-
-    <div>
-        <table class="Componet">
-            <tr>
-                <td align="center" class="Mostrando-20-de-44">
-                    Busca por nombre de cliente o número de póliza (solo para conducto intermediario)
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <form>
-                        <mat-form-field>
-                            <input matInput placeholder="Nombre del cliente">
-                        </mat-form-field>
-                        <button mat-raised-button class="RectangleNaranga">
-                            <samp class="Buscar-cliente"> Buscar cliente</samp>
-                        </button>
-                    </form>
-                </td>
-            </tr>
-        </table>
+<div class="col-md-12 m-2">
+    <div class="titulo">
+        <samp class="Pago-en-lnea">Mantenimiento cuentas bancarias CAT </samp>
+        <samp class="-Personas">| Persona</samp>
     </div>
+
+    <div class="flex-container">
+        <div class="mostrando ">
+            <p class="Mostrando-20-de-44">Busca por nombre de cliente o número de póliza (solo para conducto intermediario)</p>
+        </div>
+
+        <div class="Rectangle flex-containerRectangle">
+            <div>
+                <input class="Nombre-del-cliente transparencia mt-2 ml-2" placeholder="Nombre del cliente">
+            </div>
+
+            <div ngbDropdown class="btn-group RectangleNaranja">
+                <button mat-button type="button" class="transparencia">
+                    <mat-icon aria-hidden="false" class="icon-search ">search</mat-icon>
+                    <samp class="Buscar-cliente ml-2">BUSCAR CLIENTE</samp>
+                    <mat-icon class=" Line"></mat-icon>
+                </button>
+                <button mat-button class="arrow_drop_down---material mt-1 transparencia margendropdown" ngbDropdownToggle>
+                </button>
+
+                <div class="dropdown-menu" ngbDropdownMenu>
+                    <li class="Resultados-de-bsque">Buscar por:</li>
+                    <button [ngStyle]="{'color':'#ff6f20'}" class="Resultado-text text-style-1" ngbDropdownItem>Nombre de cliente</button>
+                    <button [ngStyle]="{'color':'#ff6f20'}" (click)="nopoliza()" class="Resultado-text text-style-1" [ngStyle]="" ngbDropdownItem>Número de póliza</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

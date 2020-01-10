@@ -1,8 +1,19 @@
 .titulo {
     width: 495px;
     height: 33px;
-  }
-  .Pago-en-lnea {
+}
+
+.fondo-CAT {
+    width: 1440px;
+    height: 800px;
+}
+
+.MTO {
+    width: 1440px;
+    height: 800px;
+}
+
+.Pago-en-lnea {
     width: 402.3px;
     height: 33px;
     font-family: OpenSans;
@@ -13,8 +24,9 @@
     line-height: normal;
     letter-spacing: normal;
     color: #002e71;
-  }
-  .-Personas {
+}
+
+.-Personas {
     width: 59.4px;
     height: 22px;
     font-family: OpenSans;
@@ -25,8 +37,9 @@
     line-height: normal;
     letter-spacing: normal;
     color: #b0b0b0;
-  }
-  .Buscar-cliente {
+}
+
+.Buscar-cliente {
     width: 95px;
     height: 17px;
     font-family: OpenSans;
@@ -37,37 +50,142 @@
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
-  }
-.Mostrando-20-de-44 {
-  width: 555px;
-  height: 20px;
-  font-family: OpenSans;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #3a3a3a;
 }
+
+.Mostrando-20-de-44 {
+    width: 555px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3a3a3a;
+}
+
 .Rectangle {
     width: 1117px;
     height: 2px;
     border-radius: 2px;
     background-color: #ebecf0;
-  }
-  .RectangleNaranga {
+}
+
+.flex-container {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.RectangleNaranja {
     width: 168px;
     height: 36px;
     background-color: #ff6f20;
-  }
-  
-  .Componet
-  {
+}
+
+.Componet {
     align-self: center;
     width: 100%;
-  }  
+}
 
-  table {
-    width: 100%;
-  }
+.Nombre-del-cliente {
+    width: 107px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #979cae;
+}
+
+.arrow_drop_down---material {
+    width: 24px;
+    height: 24px;
+    font-family: material;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding: 2px;
+}
+
+.Line {
+    width: 2px;
+    height: 37px;
+    border: solid 1px #ffffff;
+}
+
+.Rectangle {
+    width: 476px;
+    height: 36px;
+    box-shadow: 0 3px 10px 0 rgba(28, 35, 65, 0.24);
+    background-color: #ffffff;
+}
+
+.icon-search {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.flex-containerRectangle {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.transparencia {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.mostrando {
+    width: 555px;
+    height: 21px;
+}
+
+.margendropdown {
+    margin-left: 55px;
+}
+
+.Resultados-de-bsque {
+    width: 170px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #343f61;
+}
+
+.Resultado-text {
+    width: 302px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #b0b0b0;
+}
+
+.Resultado-text .text-style-1 {
+    color: #3a3a3a;
+}

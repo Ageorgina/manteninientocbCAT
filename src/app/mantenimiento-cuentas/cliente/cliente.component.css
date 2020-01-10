@@ -1,0 +1,245 @@
+.Referencias-bancaria {
+    width: 111px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ff6f20;
+}
+
+.Nueva-referencia {
+    width: 133px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3a3a3a;
+}
+
+.back {
+    width: 424px;
+    height: 33px;
+    object-fit: contain;
+}
+
+.Recibos-de-la-pliza {
+    width: 266px;
+    height: 33px;
+    font-family: OpenSans;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #002e71;
+}
+
+.Mostrando-20-de-44 {
+    width: 132px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3a3a3a;
+}
+
+.No-de-Pliza {
+    width: 69px;
+    height: 14px;
+    font-family: OpenSans;
+    font-size: 11px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: #191d28;
+}
+
+.No-poliza {
+    width: 97px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ff6f20;
+}
+
+.Ramo {
+    width: 38px;
+    height: 14px;
+    font-family: OpenSans;
+    font-size: 11px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: #191d28;
+}
+
+.RamoTD {
+    width: 42px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+
+.Premiere-Individual {
+    width: 148px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+
+.Vigente {
+    width: 97px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3a3a3a;
+}
+
+.vrs1 {
+    width: 30px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3a3a3a;
+}
+
+.vigencia {
+    width: 75px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+
+.Rectangle-Copy-5 {
+    width: 1133px;
+    height: 439px;
+    border: solid 1px #f3f3f3;
+}
+
+.Arrows_C-Copy-38 {
+    width: 8px;
+    height: 10px;
+    object-fit: contain;
+}
+
+.icon-back {
+    width: 7px;
+    height: 12px;
+    object-fit: contain;
+    color: #ff6f20;
+}
+
+.Producto {
+    width: 111px;
+    height: 14px;
+    font-family: OpenSans;
+    font-size: 11px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: #191d28;
+}
+
+.Estatus-pliza {
+    width: 74px;
+    height: 14px;
+    font-family: OpenSans;
+    font-size: 11px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: #191d28;
+}
+
+.Versin {
+    width: 41px;
+    height: 14px;
+    font-family: OpenSans;
+    font-size: 11px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: #191d28;
+}
+
+.Vigencia-desde {
+    width: 79px;
+    height: 14px;
+    font-family: OpenSans;
+    font-size: 11px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: #191d28;
+}
+
+.Vigencia-hasta {
+    width: 77px;
+    height: 14px;
+    font-family: OpenSans;
+    font-size: 11px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: #191d28;
+}

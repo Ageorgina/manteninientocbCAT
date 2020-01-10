@@ -1,221 +1,211 @@
 <form [formGroup]="searchForm" (ngSubmit)="onsearch()">
-  <table class="Button Componet">
-    <tr>
-      <td align="right">
-        <button mat-stroked-button class="Rectangle-Copy-7" (click)="openDialog()">
+    <table class="Button Componet">
+        <tr>
+            <td align="right">
+                <button mat-stroked-button class="Rectangle-Copy-7" (click)="openDialog()">
           <samp class="Todos-los-recibos"> MESES SIN INTERESES</samp>
         </button>
-        <a mat-stroked-button class="Rectangle-Copy-7" routerLink="/recibo/pago-poliza-conivencia">
-          <samp class="Todos-los-recibos">PAGO POLIZA CONVIVENCIA</samp>
-        </a>
-        <mat-form-field>
-          <input matInput placeholder="Nombre del cliente" formControlName="campo">
-        </mat-form-field>
-      
+                <a mat-stroked-button class="Rectangle-Copy-7" routerLink="/recibo/pago-poliza-conivencia">
+                    <samp class="Todos-los-recibos">PAGO POLIZA CONVIVENCIA</samp>
+                </a>
+                <mat-form-field>
+                    <input matInput placeholder="Nombre del cliente" formControlName="campo">
+                </mat-form-field>
 
-     
-          
-            <div ngbDropdown class="d-inline-block">
-              <button class="btn RectangleNaranga" id="dropdownBasic1" ngbDropdownToggle>
+
+
+
+                <div ngbDropdown class="d-inline-block">
+                    <button class="btn RectangleNaranja" id="dropdownBasic1" ngbDropdownToggle>
                 <samp class="Buscar-cliente"> Buscar cliente |</samp>
               </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button ngbDropdownItem>Nombre del cliente</button>
-                <button ngbDropdownItem>Número poliza</button>
-                <button ngbDropdownItem>Número recibo</button>
-              </div>
-            </div>
-      
-        
-    
-      </td>
-    </tr>
-  </table>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem>Nombre del cliente</button>
+                        <button ngbDropdownItem>Número poliza</button>
+                        <button ngbDropdownItem>Número recibo</button>
+                    </div>
+                </div>
+
+
+
+            </td>
+        </tr>
+    </table>
 </form>
 
 
 
 <nav mat-tab-nav-bar>
-  <a mat-tab-link *ngFor="let link of navLinks" (click)="matTabTable(link)" [active]="activeLink == link">
-    <span *ngIf="activeLink == link" class="Plizas-pendientes-select"> {{link.label}}</span>
-    <span *ngIf="activeLink != link" class="Plizas-pendientes"> {{link.label}}</span>
-  </a>
+    <a mat-tab-link *ngFor="let link of navLinks" (click)="matTabTable(link)" [active]="activeLink == link">
+        <span *ngIf="activeLink == link" class="Plizas-pendientes-select"> {{link.label}}</span>
+        <span *ngIf="activeLink != link" class="Plizas-pendientes"> {{link.label}}</span>
+    </a>
 </nav>
 <form [formGroup]="filterForm">
-  <table class="Button Componet">
-    <tr>
-      <td>
-        <samp class="Mostrando">Mostrando 20 de {{paginator.length}}</samp>
-      </td>
-      <td align="right">
-        <a class="Limpiar-filtros" *ngIf="countFilter != 0" (click)=" filterForm.reset()">
+    <table class="Button Componet">
+        <tr>
+            <td>
+                <samp class="Mostrando">Mostrando 20 de {{paginator.length}}</samp>
+            </td>
+            <td align="right">
+                <a class="Limpiar-filtros" *ngIf="countFilter != 0" (click)=" filterForm.reset()">
           Limpiar filtros
         </a>
-        <button mat-stroked-button class="Rectangle-Copy-7" (click)="showHideButton()">
+                <button mat-stroked-button class="Rectangle-Copy-7" (click)="showHideButton()">
           <span class="Oval CountFilter" *ngIf="countFilter != 0">{{countFilter}}</span>
           <samp class="Filtrar"> FILTRAR </samp>
         </button>
-      </td>
-    </tr>
-  </table>
+            </td>
+        </tr>
+    </table>
 
-  <div *ngIf="!showMainContent">
+    <div *ngIf="!showMainContent">
 
 
 
-    <mat-accordion>
-      <mat-form-field>
-        <mat-label class="Filtro">Ramo</mat-label>
-        <mat-select [(ngModel)]="selectedRamo" name="ramo" formControlName="ramo" (ngModelChange)="countFilt()">
-          <mat-option *ngFor="let ramo of ramos" [value]="ramo.value">
-            {{ramo.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label class="Filtro">Conducto de cobro</mat-label>
-        <mat-select [(ngModel)]="selectedConducto" name="conducto" formControlName="conducto"
-          (ngModelChange)="countFilt()">
-          <mat-option *ngFor="let conducto of conductos" [value]="conducto.value">
-            {{conducto.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field *ngIf="status == '1' || status == '2'">
-        <mat-label>Estatus</mat-label>
-        <mat-select [(ngModel)]="selectedEstatus" name="estatu" formControlName="estatu" (ngModelChange)="countFilt()">
-          <mat-option *ngFor="let estatu of estatus" [value]="estatu.value">
-            {{estatu.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+        <mat-accordion>
+            <mat-form-field>
+                <mat-label class="Filtro">Ramo</mat-label>
+                <mat-select [(ngModel)]="selectedRamo" name="ramo" formControlName="ramo" (ngModelChange)="countFilt()">
+                    <mat-option *ngFor="let ramo of ramos" [value]="ramo.value">
+                        {{ramo.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label class="Filtro">Conducto de cobro</mat-label>
+                <mat-select [(ngModel)]="selectedConducto" name="conducto" formControlName="conducto" (ngModelChange)="countFilt()">
+                    <mat-option *ngFor="let conducto of conductos" [value]="conducto.value">
+                        {{conducto.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field *ngIf="status == '1' || status == '2'">
+                <mat-label>Estatus</mat-label>
+                <mat-select [(ngModel)]="selectedEstatus" name="estatu" formControlName="estatu" (ngModelChange)="countFilt()">
+                    <mat-option *ngFor="let estatu of estatus" [value]="estatu.value">
+                        {{estatu.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
 
-      <mat-form-field *ngIf="status == '3' ">
-        <mat-label class="Filtro">Fecha de pago</mat-label>
-        <input matInput [matDatepicker]="fechaPagoDesde" placeholder="desde" formControlName="fechaPagoDesde"
-          (ngModelChange)="countFilt()">
-        <mat-datepicker-toggle matSuffix [for]="fechaPagoDesde"></mat-datepicker-toggle>
-        <mat-datepicker #fechaPagoDesde></mat-datepicker>
-        <input matInput [matDatepicker]="fechaPagoHasta" placeholder="hasta" formControlName="fechaPagoHasta"
-          (ngModelChange)="countFilt()">
-        <mat-datepicker-toggle matSuffix [for]="fechaPagoHasta"></mat-datepicker-toggle>
-        <mat-datepicker #fechaPagoHasta></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field *ngIf="status == '4' ">
-        <mat-label class="Filtro">Fecha de cancelación</mat-label>
-        <input matInput [matDatepicker]="fechaCancelacionDesde" placeholder="desde"
-          formControlName="fechaCancelacionDesde" (ngModelChange)="countFilt()">
-        <mat-datepicker-toggle matSuffix [for]="fechaCancelacionDesde"></mat-datepicker-toggle>
-        <mat-datepicker #fechaCancelacionDesde></mat-datepicker>
-        <input matInput [matDatepicker]="fechaCancelacionHasta" placeholder="hasta"
-          formControlName="fechaCancelacionHasta" (ngModelChange)="countFilt()">
-        <mat-datepicker-toggle matSuffix [for]="fechaCancelacionHasta"></mat-datepicker-toggle>
-        <mat-datepicker #fechaCancelacionHasta></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label class="Filtro">Periodo que cubre el recibo</mat-label>
-        <input matInput [matDatepicker]="periodoDesde" placeholder="desde" formControlName="periodoDesde"
-          (ngModelChange)="countFilt()">
-        <mat-datepicker-toggle matSuffix [for]="periodoDesde"></mat-datepicker-toggle>
-        <mat-datepicker #periodoDesde></mat-datepicker>
-        <input matInput [matDatepicker]="periodoHasta" placeholder="hasta" formControlName="periodoHasta"
-          (ngModelChange)="countFilt()">
-        <mat-datepicker-toggle matSuffix [for]="periodoHasta"></mat-datepicker-toggle>
-        <mat-datepicker #periodoHasta></mat-datepicker>
-      </mat-form-field>
-    </mat-accordion>
-  </div>
+            <mat-form-field *ngIf="status == '3' ">
+                <mat-label class="Filtro">Fecha de pago</mat-label>
+                <input matInput [matDatepicker]="fechaPagoDesde" placeholder="desde" formControlName="fechaPagoDesde" (ngModelChange)="countFilt()">
+                <mat-datepicker-toggle matSuffix [for]="fechaPagoDesde"></mat-datepicker-toggle>
+                <mat-datepicker #fechaPagoDesde></mat-datepicker>
+                <input matInput [matDatepicker]="fechaPagoHasta" placeholder="hasta" formControlName="fechaPagoHasta" (ngModelChange)="countFilt()">
+                <mat-datepicker-toggle matSuffix [for]="fechaPagoHasta"></mat-datepicker-toggle>
+                <mat-datepicker #fechaPagoHasta></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field *ngIf="status == '4' ">
+                <mat-label class="Filtro">Fecha de cancelación</mat-label>
+                <input matInput [matDatepicker]="fechaCancelacionDesde" placeholder="desde" formControlName="fechaCancelacionDesde" (ngModelChange)="countFilt()">
+                <mat-datepicker-toggle matSuffix [for]="fechaCancelacionDesde"></mat-datepicker-toggle>
+                <mat-datepicker #fechaCancelacionDesde></mat-datepicker>
+                <input matInput [matDatepicker]="fechaCancelacionHasta" placeholder="hasta" formControlName="fechaCancelacionHasta" (ngModelChange)="countFilt()">
+                <mat-datepicker-toggle matSuffix [for]="fechaCancelacionHasta"></mat-datepicker-toggle>
+                <mat-datepicker #fechaCancelacionHasta></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label class="Filtro">Periodo que cubre el recibo</mat-label>
+                <input matInput [matDatepicker]="periodoDesde" placeholder="desde" formControlName="periodoDesde" (ngModelChange)="countFilt()">
+                <mat-datepicker-toggle matSuffix [for]="periodoDesde"></mat-datepicker-toggle>
+                <mat-datepicker #periodoDesde></mat-datepicker>
+                <input matInput [matDatepicker]="periodoHasta" placeholder="hasta" formControlName="periodoHasta" (ngModelChange)="countFilt()">
+                <mat-datepicker-toggle matSuffix [for]="periodoHasta"></mat-datepicker-toggle>
+                <mat-datepicker #periodoHasta></mat-datepicker>
+            </mat-form-field>
+        </mat-accordion>
+    </div>
 </form>
 
 <div>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
 
-    <ng-container matColumnDef="poliza">
-      <th mat-header-cell *matHeaderCellDef class="Campo-key"> No. de Póliza </th>
-      <td mat-cell *matCellDef="let element" class="Campo"> {{element.numeroPoliza}} </td>
-    </ng-container>
-    <ng-container matColumnDef="ramo">
-      <th mat-header-cell *matHeaderCellDef class="Campo-key"> Ramo </th>
-      <td mat-cell *matCellDef="let element" class="Campo"> {{element.ramo.descRamo}} </td>
-    </ng-container>
-    <ng-container matColumnDef="cliente">
-      <th mat-header-cell *matHeaderCellDef class="Campo-key"> Nombre de cliente </th>
-      <td mat-cell *matCellDef="let element" class="Campo"> {{element.nombreContratante}} </td>
-    </ng-container>
-    <ng-container matColumnDef="noRecibo">
-      <th mat-header-cell *matHeaderCellDef class="Campo-key">No. de recibo </th>
-      <td mat-cell *matCellDef="let element">
-        <a class="No-recibo-link" (click)="openRecibo(element)">
+        <ng-container matColumnDef="poliza">
+            <th mat-header-cell *matHeaderCellDef class="Campo-key"> No. de Póliza </th>
+            <td mat-cell *matCellDef="let element" class="Campo"> {{element.numeroPoliza}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ramo">
+            <th mat-header-cell *matHeaderCellDef class="Campo-key"> Ramo </th>
+            <td mat-cell *matCellDef="let element" class="Campo"> {{element.ramo.descRamo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="cliente">
+            <th mat-header-cell *matHeaderCellDef class="Campo-key"> Nombre de cliente </th>
+            <td mat-cell *matCellDef="let element" class="Campo"> {{element.nombreContratante}} </td>
+        </ng-container>
+        <ng-container matColumnDef="noRecibo">
+            <th mat-header-cell *matHeaderCellDef class="Campo-key">No. de recibo </th>
+            <td mat-cell *matCellDef="let element">
+                <a class="No-recibo-link" (click)="openRecibo(element)">
           {{element.numeroRecibo}}
         </a>
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="estatusRecibo">
-      <th mat-header-cell *matHeaderCellDef class="Campo-key"> Estatus del recibo </th>
-      <td mat-cell *matCellDef="let element">
-        <div *ngIf="element.estado.clvSubEstado  === 'CB'" class="Rechazo-definitivo-">
-          <img src="assets/img/group-red.png"> {{element.estado.descApp}}</div>
-        <div *ngIf="element.estado.clvSubEstado === 'PD'" class="Pendiente-exigible">
-          <img src="assets/img/group-blue.png"> {{element.estado.descApp}} </div>
-        <div *ngIf="element.estado.clvSubEstado ===  'EB'" class="Pendiente-exigible">
-          <img src="assets/img/pendiente.png"> {{element.estado.descApp}} # {{element.reintento}} </div>
-      </td>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="estatusRecibo">
+            <th mat-header-cell *matHeaderCellDef class="Campo-key"> Estatus del recibo </th>
+            <td mat-cell *matCellDef="let element">
+                <div *ngIf="element.estado.clvSubEstado  === 'CB'" class="Rechazo-definitivo-">
+                    <img src="assets/img/group-red.png"> {{element.estado.descApp}}</div>
+                <div *ngIf="element.estado.clvSubEstado === 'PD'" class="Pendiente-exigible">
+                    <img src="assets/img/group-blue.png"> {{element.estado.descApp}} </div>
+                <div *ngIf="element.estado.clvSubEstado ===  'EB'" class="Pendiente-exigible">
+                    <img src="assets/img/pendiente.png"> {{element.estado.descApp}} # {{element.reintento}} </div>
+            </td>
 
-    </ng-container>
-    <ng-container matColumnDef="fechaPago">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Fecha de pago</th>
-      <td mat-cell *matCellDef="let element" class="Campo"> {{element.fechaProgramada | fechas |date:"dd-MM-yyyy" }}
-      </td>
-    </ng-container>
+        </ng-container>
+        <ng-container matColumnDef="fechaPago">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Fecha de pago</th>
+            <td mat-cell *matCellDef="let element" class="Campo"> {{element.fechaProgramada | fechas |date:"dd-MM-yyyy" }}
+            </td>
+        </ng-container>
 
-    <ng-container matColumnDef="fechaCancelacion">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Fecha de cancelación</th>
-      <td mat-cell *matCellDef="let element" class="Campo">
-        {{element.fechaCancelacionRecibo | fechas |date:"dd-MM-yyyy" }} </td>
-    </ng-container>
+        <ng-container matColumnDef="fechaCancelacion">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Fecha de cancelación</th>
+            <td mat-cell *matCellDef="let element" class="Campo">
+                {{element.fechaCancelacionRecibo | fechas |date:"dd-MM-yyyy" }} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="monto">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Monto</th>
-      <td mat-cell *matCellDef="let element" class="Monto"> {{element.importe | currency }} {{element.moneda }}
-        <div class="Rectangle-botones-float" *ngIf=" rowData == element" >
-          <button mat-stroked-button class="Rectangle-Copy-7-Float" (click)="openPagar(element)">
+        <ng-container matColumnDef="monto">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Monto</th>
+            <td mat-cell *matCellDef="let element" class="Monto"> {{element.importe | currency }} {{element.moneda }}
+                <div class="Rectangle-botones-float" *ngIf=" rowData == element">
+                    <button mat-stroked-button class="Rectangle-Copy-7-Float" (click)="openPagar(element)">
             <samp class="Todos-los-recibos"> Pagar </samp>
           </button>
-          <button mat-stroked-button class="Rectangle-Copy-7-Float" (click)="openRecibos(element)">
+                    <button mat-stroked-button class="Rectangle-Copy-7-Float" (click)="openRecibos(element)">
             <samp class="Todos-los-recibos"> Ver recibos</samp>
           </button>
-          <button mat-stroked-button class="Rectangle-Copy-7-Float" (click)="openGenerarReferencia(element)">
+                    <button mat-stroked-button class="Rectangle-Copy-7-Float" (click)="openGenerarReferencia(element)">
             <samp class="Todos-los-recibos"> Generar referencia</samp>
           </button>
-        </div>
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="fechaDesde">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Periodo desde </th>
-      <td mat-cell *matCellDef="let element" class="Campo">
-        {{element.inicioVigencia | fechas |date:"dd-MM-yyyy" }}
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="fechaHasta">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Periodo hasta </th>
-      <td mat-cell *matCellDef="let element" class="Campo">
-        {{element.fechaVencimiento | fechas |date:"dd-MM-yyyy" }}
-      </td>
-    </ng-container>
- 
-    <ng-container matColumnDef="conducto">
-      <th mat-header-cell *matHeaderCellDef class="Campo-key"> Conducto </th>
-      <td mat-cell *matCellDef="let element" class="Campo"> {{element.canalCobro.descCanalCobro}} </td>
-    </ng-container>
+                </div>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="fechaDesde">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Periodo desde </th>
+            <td mat-cell *matCellDef="let element" class="Campo">
+                {{element.inicioVigencia | fechas |date:"dd-MM-yyyy" }}
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="fechaHasta">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="Campo-key"> Periodo hasta </th>
+            <td mat-cell *matCellDef="let element" class="Campo">
+                {{element.fechaVencimiento | fechas |date:"dd-MM-yyyy" }}
+            </td>
+        </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-     (mouseover)="mouseoverRow(row)"
-     (mouseout)="mouseout()"
-     ></tr>
+        <ng-container matColumnDef="conducto">
+            <th mat-header-cell *matHeaderCellDef class="Campo-key"> Conducto </th>
+            <td mat-cell *matCellDef="let element" class="Campo"> {{element.canalCobro.descCanalCobro}} </td>
+        </ng-container>
 
-  </table>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (mouseover)="mouseoverRow(row)" (mouseout)="mouseout()"></tr>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>

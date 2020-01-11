@@ -11,10 +11,12 @@ import { ReciboService, CatalogosService } from './_services';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptor } from './_helpers/auth-interceptor-api-key';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { BusquedaPipe } from './_pipes/busqueda.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BusquedaPipe
   ],
   imports: [
     NgbModule,

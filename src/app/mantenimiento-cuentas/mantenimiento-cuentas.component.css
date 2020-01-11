@@ -189,3 +189,34 @@
 .Resultado-text .text-style-1 {
     color: #3a3a3a;
 }
+
+.Rectangle1 {
+    margin-top: 8px;
+    width: 476px;
+}
+
+.busqueda {
+    margin-top: 8px;
+    width: 476px;
+    box-shadow: 0 3px 10px 0 rgba(28, 35, 65, 0.24);
+    background-color: #ffffff;
+}
+
+.flex-containerBusq {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Asegurado {
+    width: 104px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #b0b0b0;
+}

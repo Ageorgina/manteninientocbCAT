@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'acme-poliza',
   templateUrl: './poliza.component.html',
@@ -7,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PolizaComponent implements OnInit {
 
-  constructor() { }
+  constructor(  ) { }
 
   ngOnInit() {
   }

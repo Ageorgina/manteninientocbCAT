@@ -34,7 +34,7 @@
             <table class="ml-3">
                 <tbody>
                     <tr *ngFor="let cliente of clientesArr ">
-                        <td class="Resultado-text ml-5" [ngStyle]="{'text-decoration': buscarTexto.value ? 'underline': 'none'}">{{cliente.nombre}}</td>
+                        <td class="Resultado-text ml-5" [ngStyle]="{'text-decoration': buscarTexto.value ? 'underline': 'none'}"><span [routerLink]="['cliente']">{{cliente.nombre}}</span></td>
                         <td class="Asegurado" style="text-align: right;">{{cliente.rol}}</td>
                     </tr>
                 </tbody>

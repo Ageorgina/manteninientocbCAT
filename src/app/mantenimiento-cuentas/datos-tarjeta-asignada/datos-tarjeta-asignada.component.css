@@ -1,0 +1,60 @@
+.RectangleTarjeta {
+    width: 414px;
+    height: 91px;
+    border-radius: 4px;
+    border: solid 1px #ececec;
+}
+
+.Tarjeta-de-cobro {
+    width: 111px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+
+.Sin-tarjeta-asignada {
+    width: 271px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3a3a3a;
+}
+
+.Rectangle-Copy-7 {
+    width: 193px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #ff6f20;
+}
+
+.Pagar {
+    width: 106px;
+    height: 17px;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    align-items: center;
+}

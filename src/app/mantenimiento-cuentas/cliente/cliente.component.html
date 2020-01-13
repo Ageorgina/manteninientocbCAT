@@ -1,43 +1,45 @@
-<div>
-    <ul>
-        <a class="Referencias-bancaria">Mantenimiento CAT /
-        </a>
-        <a class="Nueva-referencia">
-            CLIENTE
-        </a>
-    </ul>
+<div class="col-md-12">
+    <div>
+        <ul>
+            <a class="Referencias-bancaria">Mantenimiento CAT /
+            </a>
+            <a class="Nueva-referencia">
+                CLIENTE
+            </a>
+        </ul>
+    </div>
+    <div>
+        <samp class="back">
+            <mat-icon routerLink="/mantenimiento-cuentas" aria-hidden="false" class="icon-back mr-2">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza"> Cliente</samp></samp>
+    </div>
+    <div class="Mostrando-20-de-44">Mostrando 8 de 8</div>
+    <br>
+    <table class="table text-center Rectangle-Copy-5">
+        <thead class="thead-light ">
+            <tr>
+                <th class="No-de-Pliza">No. de Póliza</th>
+                <th class="Ramo">Ramo</th>
+                <th class="Producto">Producto</th>
+                <th class="Estatus-pliza">Estatus Póliza</th>
+                <th class="Versin">Versión</th>
+                <th class="Vigencia-desde">Vigencia desde
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+                <th class="Vigencia-hasta">Vigencia hasta
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr #vigenciahasta id="vigenciahasta">
+                <td><a routerLink="/mantenimiento-cuentas/poliza" class="No-poliza">1111111111</a> </td>
+                <td class="RamoTD">1</td>
+                <td class="Premiere-Individual">1</td>
+                <td class="Vigente">1</td>
+                <td class="vrs1">1</td>
+                <td class="vigencia">1</td>
+                <td class="vigencia">1 <button #recibos id="recibos" routerLink="/mantenimiento-cuentas/poliza">VER RECIBOS</button></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<div>
-    <samp class="back">
-        <mat-icon aria-hidden="false" class="icon-back">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza"> Cliente</samp></samp>
-</div>
-<div class="Mostrando-20-de-44">Mostrando 8 de 8</div>
-<br>
-<table class="table text-center Rectangle-Copy-5">
-    <thead class="thead-light No-de-Pliza">
-        <tr>
-            <th class="No-de-Pliza"> No. de Póliza</th>
-            <th class="Ramo">Ramo</th>
-            <th class="">Producto</th>
-            <th class="">Estatus Póliza</th>
-            <th class="">Versión</th>
-            <th class="">Vigencia desde
-                <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
-            </th>
-            <th>Vigencia hasta
-                <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="No-poliza">1111111111</td>
-            <td class="RamoTD">1</td>
-            <td class="Premiere-Individual">1</td>
-            <td class="Vigente">1</td>
-            <td class="vrs1">1</td>
-            <td class="vigencia">1</td>
-            <td class="vigencia">1</td>
-        </tr>
-    </tbody>
-</table>

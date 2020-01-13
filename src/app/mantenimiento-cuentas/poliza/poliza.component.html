@@ -1,1 +1,66 @@
-<p>poliza works!</p>
+<div class="col-md-12">
+    <div>
+        <ul>
+            <a class="Referencias-bancaria">Mantenimiento CAT /
+            </a>
+            <a class="Referencias-bancaria">
+                CLIENTE /
+            </a>
+            <a class="Nueva-referencia">
+                Póliza #
+            </a>
+        </ul>
+    </div>
+    <div>
+        <samp class="back">
+            <mat-icon routerLink="/mantenimiento-cuentas" aria-hidden="false" class="icon-back mr-2">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza ml-1">Recibos de la póliza #</samp>
+        </samp>
+    </div>
+    <div class="flex-container mt-2">
+        <acme-datos-poliza></acme-datos-poliza>
+        <acme-datos-tarjeta-asignada></acme-datos-tarjeta-asignada>
+    </div>
+    <br>
+
+    <table class="table text-center Rectangle-Copy-5 ">
+        <thead class="thead-light ">
+            <tr>
+                <th class="Fraccin">Fracción
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+                <th class="No-de-recibo">No. de recibo</th>
+                <th class="Estatus-del-recibo">Estatus del recibo</th>
+                <th class="Monto">Monto
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+                <th class="Periodo-desde">Periodo desde
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+                <th class="Periodo-hasta">Periodo hasta
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+                <th class="Conducto">Conducto
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+                <th class="Tarjeta">Tarjeta
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+                <th class="Fecha-cobro">Fecha de cobro
+                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr #vigenciahasta id="vigenciahasta">
+                <td class="FraccinTD">1/6</td>
+                <td class="No-del-reciboTD">1111111111</td>
+                <td class="Estatus">1</td>
+                <td class="-MN">1</td>
+                <td class="PeriodoTD">1</td>
+                <td class="PeriodoTD">1</td>
+                <td class="TarjetaTD">1</td>
+                <td class="Sin-asignacin">1 <button #recibos id="recibos" routerLink="/mantenimiento-cuentas/poliza">VER RECIBOS</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

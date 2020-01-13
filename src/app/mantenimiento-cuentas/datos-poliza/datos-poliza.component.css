@@ -1,0 +1,76 @@
+    .RectangleDatos {
+        width: 659px;
+        height: 124px;
+        background-color: #f5f9ff;
+    }
+    
+    .Lorem-ipsum-dolor-si {
+        width: 200px;
+        height: 19px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .Mensual {
+        width: 150px;
+        height: 19px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .Contratante {
+        width: 160px;
+        height: 19px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #979cae;
+    }
+    
+    .No-de-pliza {
+        width: 150px;
+        height: 19px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #979cae;
+    }
+    
+    .Datos-de-la-pliza {
+        width: 119px;
+        height: 19px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .Rectangle-Copy-5 {
+        width: 1133px;
+        height: 342px;
+        border: solid 1px #f3f3f3;
+    }

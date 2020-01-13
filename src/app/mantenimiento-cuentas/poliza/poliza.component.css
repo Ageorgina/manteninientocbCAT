@@ -1,0 +1,302 @@
+    .Referencias-bancaria {
+        width: 111px;
+        height: 17px;
+        font-family: OpenSans;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ff6f20;
+    }
+    
+    .Nueva-referencia {
+        width: 133px;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #3a3a3a;
+    }
+    
+    .back {
+        width: 424px;
+        height: 33px;
+        object-fit: contain;
+    }
+    
+    .Recibos-de-la-pliza {
+        width: 266px;
+        height: 33px;
+        font-family: OpenSans;
+        font-size: 24px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #002e71;
+    }
+    
+    .No-de-pliza {
+        width: 150px;
+        height: 19px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #979cae;
+    }
+    
+    .Rectangle-Copy-5 {
+        width: 1133px;
+        height: 342px;
+        border: solid 1px #f3f3f3;
+    }
+    
+    .Arrows_C-Copy-38 {
+        width: 8px;
+        height: 10px;
+        object-fit: contain;
+    }
+    
+    .icon-back {
+        width: 7px;
+        height: 12px;
+        object-fit: contain;
+        color: #ff6f20;
+    }
+    
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+        align-items: center;
+    }
+    
+    .Fraccin {
+        width: 45px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        color: #191d28;
+    }
+    
+    .No-de-recibo {
+        width: 71px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        color: #191d28;
+    }
+    
+    .Monto {
+        width: 35px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        text-align: center;
+        color: #191d28;
+    }
+    
+    .Estatus-del-recibo {
+        width: 100px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        color: #191d28;
+    }
+    
+    .Periodo-desde {
+        width: 76px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        color: #191d28;
+    }
+    
+    .Periodo-hasta {
+        width: 74px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        color: #191d28;
+    }
+    
+    .Conducto {
+        width: 51px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        color: #191d28;
+    }
+    
+    .Tarjeta {
+        width: 38px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        color: #191d28;
+    }
+    
+    .Fecha-cobro {
+        width: 65px;
+        height: 14px;
+        font-family: OpenSans;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        color: #191d28;
+    }
+    
+    .FraccinTD {
+        width: 50px;
+        height: 20px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .No-del-reciboTD {
+        width: 97px;
+        height: 20px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ff6f20;
+    }
+    
+    .-MN {
+        width: 100px;
+        height: 20px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .PeriodoTD {
+        width: 75px;
+        height: 20px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .Intermediario {
+        width: 102px;
+        height: 20px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .TarjetaTD {
+        width: 102px;
+        height: 20px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .Sin-asignacin {
+        width: 97px;
+        height: 20px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1c2341;
+    }
+    
+    .Estatus {
+        width: 168px;
+        height: 20px;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+    }

@@ -1,136 +1,167 @@
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.Asignar-tarjeta-para {
-    width: 340px;
-    height: 22px;
-    font-family: OpenSans;
-    font-size: 16px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #002e71;
-}
-
-.-Agrega-una-tarjet {
-    width: 141px;
-    height: 19px;
-    font-family: OpenSans;
-    font-size: 14px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #3a3a3a;
-}
-
-.RectangleBanco {
-    width: 408px;
-    height: 59px;
-    border-radius: 1px;
-    background-color: #ffffff;
-}
-
-.RectangleTitular {
-    width: 408px;
-    height: 56px;
-    border-radius: 1px;
-    background-color: #ffffff;
-}
-
-.RectangleMes {
-    width: 47px;
-    height: 2px;
-    background-color: #aac3ee;
-}
-
-.RectangleVencimiento {
-    width: 189px;
-    height: 56px;
-    border-radius: 1px;
-    background-color: #ffffff;
-}
-
-.vacioCVV {
-    width: 189px;
-    height: 56px;
-}
-
-.vacioTarjeta {
-    width: 408px;
-    height: 59px;
-}
-
-.flex-containerT {
-    display: flex;
-    justify-content: space-around;
-}
-
-.-Indica-cundo-se {
-    width: 272px;
-    height: 19px;
-    font-family: OpenSans;
-    font-size: 14px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #3a3a3a;
-}
-
-.Cobrar-los {
-    width: 68px;
-    height: 19px;
-    font-family: OpenSans;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #3a3a3a;
-}
-
-.Rectangle-Copy-7 {
-    width: 207px;
-    height: 30px;
-    border-radius: 4px;
-    background-color: #bab9b9;
-}
-
-.de-cada-mes {
-    width: 86px;
-    height: 19px;
-    font-family: OpenSans;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #3a3a3a;
-}
-
-.Pagar {
-    width: 176px;
-    height: 17px;
-    font-family: OpenSans;
-    font-size: 12px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #747474;
-}
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .off {
+            width: 517px;
+            height: 688px;
+            background-color: transparent;
+        }
+        
+        .Asignar-tarjeta-para {
+            width: 340px;
+            height: 22px;
+            font-family: OpenSans;
+            font-size: 16px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #002e71;
+            margin-left: 10%;
+        }
+        
+        .-Agrega-una-tarjet {
+            width: 141px;
+            height: 19px;
+            font-family: OpenSans;
+            font-size: 14px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #3a3a3a;
+        }
+        
+        .RectangleBanco {
+            width: 408px;
+            height: 59px;
+            border-radius: 1px;
+            background-color: #ffffff;
+        }
+        
+        .RectangleTitular {
+            width: 408px;
+            height: 56px;
+            border-radius: 1px;
+            background-color: #ffffff;
+        }
+        
+        .RectangleMes {
+            width: 47px;
+            height: 2px;
+            background-color: #aac3ee;
+        }
+        
+        .RectangleVencimiento {
+            width: 189px;
+            height: 56px;
+            border-radius: 1px;
+            background-color: #ffffff;
+        }
+        
+        .vacioCVV {
+            width: 189px;
+            height: 56px;
+        }
+        
+        .vacioTarjeta {
+            width: 408px;
+            height: 59px;
+        }
+        
+        .flex-containerT {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .-Indica-cundo-se {
+            width: 272px;
+            height: 19px;
+            font-family: OpenSans;
+            font-size: 14px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #3a3a3a;
+        }
+        
+        .Cobrar-los {
+            width: 68px;
+            height: 19px;
+            font-family: OpenSans;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #3a3a3a;
+        }
+        
+        .Rectangle-Copy-7 {
+            width: 207px;
+            height: 30px;
+            border-radius: 4px;
+            background-color: #bab9b9;
+            margin-left: 25%;
+        }
+        
+        .de-cada-mes {
+            width: 86px;
+            height: 19px;
+            font-family: OpenSans;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #3a3a3a;
+        }
+        
+        .Pagar {
+            width: 176px;
+            height: 17px;
+            font-family: OpenSans;
+            font-size: 12px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #747474;
+        }
+        
+        .Group {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+        }
+        
+        .salir {
+            width: 58px;
+            height: 58px;
+        }
+        
+        .Rectangle {
+            width: 488px;
+            height: 659px;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.17);
+            border: solid 1px #e7e7e7;
+            background-color: #ffffff;
+        }
+        
+        .close {
+            position: relative;
+        }

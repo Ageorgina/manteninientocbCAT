@@ -1,16 +1,17 @@
 <div class="col-md-12">
+    <p></p>
     <div>
         <ul>
             <a class="Referencias-bancaria">Mantenimiento CAT /
             </a>
             <a class="Nueva-referencia">
-                CLIENTE
+                {{cliente.nombre}}
             </a>
         </ul>
     </div>
     <div>
         <samp class="back">
-            <mat-icon routerLink="/mantenimiento-cuentas" aria-hidden="false" class="icon-back mr-2">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza"> Cliente</samp></samp>
+            <mat-icon routerLink="/mantenimiento-cuentas" aria-hidden="false" class="icon-back mr-2">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza ml-2">{{cliente.nombre}}</samp></samp>
     </div>
     <div class="Mostrando-20-de-44">Mostrando 8 de 8</div>
     <br>
@@ -31,14 +32,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr #vigenciahasta id="vigenciahasta">
-                <td><a routerLink="/mantenimiento-cuentas/poliza" class="No-poliza">1111111111</a> </td>
-                <td class="RamoTD">1</td>
-                <td class="Premiere-Individual">1</td>
-                <td class="Vigente">1</td>
-                <td class="vrs1">1</td>
-                <td class="vigencia">1</td>
-                <td class="vigencia">1 <button #recibos id="recibos" routerLink="/mantenimiento-cuentas/poliza">VER RECIBOS</button></td>
+            <tr #vigenciahasta id="vigenciahasta" *ngFor="let poliza of polizas; let i of index">
+                <td><a class="No-poliza" (click)="irpoliza(poliza)">{{poliza.nopoliza}}</a> </td>
+                <td class="RamoTD">{{poliza.ramo}}</td>
+                <td class="Premiere-Individual">{{poliza.producto}}</td>
+                <td class="Vigente">{{poliza.estatus}}</td>
+                <td class="vrs1">{{poliza.version}}</td>
+                <td class="vigencia">{{poliza.desde}}</td>
+                <td class="vigencia"><a #hasta id="hasta">{{poliza.hasta}}</a> <button #recibos id="recibos" (click)="irpoliza(poliza)">VER RECIBOS</button></td>
             </tr>
         </tbody>
     </table>

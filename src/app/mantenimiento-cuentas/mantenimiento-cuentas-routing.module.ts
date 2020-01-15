@@ -7,8 +7,8 @@ import { PolizaComponent } from './poliza/poliza.component';
 
 const routes: Routes = [
   { path: '', component: MantenimientoCuentasComponent },
-  { path: 'cliente', component: ClienteComponent },
-  { path: 'poliza', component: PolizaComponent }
+  { path: 'cliente/:id', component: ClienteComponent },
+  { path: 'poliza/:nopoliza', component: PolizaComponent }
 ];
 
 @NgModule({

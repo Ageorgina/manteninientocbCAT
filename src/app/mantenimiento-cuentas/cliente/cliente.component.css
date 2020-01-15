@@ -235,6 +235,10 @@ tr#vigenciahasta:hover button#recibos {
     visibility: visible;
 }
 
+tr#vigenciahasta:hover a#hasta {
+    visibility: hidden;
+}
+
 .No-poliza {
     width: 97px;
     height: 20px;

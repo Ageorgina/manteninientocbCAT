@@ -4,16 +4,16 @@
             <a class="Referencias-bancaria">Mantenimiento CAT /
             </a>
             <a class="Referencias-bancaria">
-                CLIENTE /
+                {{cliente.nombre}} /
             </a>
             <a class="Nueva-referencia">
-                Póliza #
+                Póliza # {{poliza |json}} 
             </a>
         </ul>
     </div>
     <div>
         <samp class="back">
-            <mat-icon routerLink="/mantenimiento-cuentas" aria-hidden="false" class="icon-back mr-2">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza ml-1">Recibos de la póliza #</samp>
+            <mat-icon aria-hidden="false" (click)="back()" class="icon-back mr-2">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza ml-1">Recibos de la póliza # {{poliza}}</samp>
         </samp>
     </div>
     <div class="flex-container mt-2">
@@ -51,15 +51,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr #vigenciahasta id="vigenciahasta">
-                <td class="FraccinTD">1/6</td>
-                <td class="No-del-reciboTD">1111111111</td>
-                <td class="Estatus">1</td>
-                <td class="-MN">1</td>
-                <td class="PeriodoTD">1</td>
-                <td class="PeriodoTD">1</td>
-                <td class="TarjetaTD">1</td>
-                <td class="Sin-asignacin">1 <button #recibos id="recibos" routerLink="/mantenimiento-cuentas/poliza">VER RECIBOS</button></td>
+            <tr #vigenciahasta id="vigenciahasta" *ngFor="let recibo of recibos">
+                <td class="FraccinTD">{{recibo.fraccion}}</td>
+                <td class="No-del-reciboTD">{{recibo.norecibo}}</td>
+                <td class="Estatus">{{recibo.estatus}}</td>
+                <td class="-MN"><strong>{{recibo.monto | currency}}</strong> </td>
+                <td class="PeriodoTD">{{recibo.hasta}}</td>
+                <td class="PeriodoTD">{{recibo.desde}}</td>
+                <td class="TarjetaTD">{{recibo.tarjeta}}</td>
+                <td class="Sin-asignacin">{{recibo.cobro}} <button #recibos id="recibos" routerLink="/mantenimiento-cuentas/poliza">VER RECIBOS</button></td>
             </tr>
         </tbody>
     </table>

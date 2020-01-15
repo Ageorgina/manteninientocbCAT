@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MantenimientoCuentasService } from '../_services/mantenimiento-cuentas.service';
-import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'acme-mantenimiento-cuentas',
@@ -11,6 +12,7 @@ export class MantenimientoCuentasComponent implements OnInit {
 
 
   constructor( private mtoSrv: MantenimientoCuentasService,
+               private router: Router
     ) {
     this.setButton();
   }
@@ -20,7 +22,6 @@ export class MantenimientoCuentasComponent implements OnInit {
   clientesArr: any[] = [];
   termino: any;
   buscarTexto = '';
-  
 
   ngOnInit() {
     this.mtoSrv.getClientes();
@@ -30,22 +31,27 @@ export class MantenimientoCuentasComponent implements OnInit {
     this.placeholderText = this.clicked ? 'Número de póliza' : 'Nombre del cliente';
   }
 
-  nopoliza() {
+  nopolizaOp() {
     this.clicked = true;
     this.setButton();
   }
-  cliente() {
+  clienteOp() {
     this.clicked = false;
     this.setButton();
   }
 
   buscar(termino) {
-    console.log(termino);
+    // console.log(termino);
     this.clientesArr = this.mtoSrv.buscarCliente(termino);
     this.limpiar();
   }
-limpiar(){
+limpiar() {
   this.buscarTexto = '';
 }
+guardar(resultado) {
+  // console.log('resultado', resultado);
+  this.router.navigate(['/mantenimiento-cuentas/cliente', resultado.idx]);
+}
+
 }
 

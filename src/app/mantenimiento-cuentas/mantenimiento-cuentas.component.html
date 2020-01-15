@@ -24,8 +24,8 @@
 
                 <div class="dropdown-menu Rectangle1 margendropdown" ngbDropdownMenu>
                     <li class="Resultados-de-bsque ml-2">Buscar por:</li>
-                    <button [ngStyle]="{'color': clicked ? '#3a3a3a': '#ff6f20'}" (click)="cliente()" class="Resultado-text text-style-1 ml-1" ngbDropdownItem>Nombre de cliente </button>
-                    <button [ngStyle]="{'color': clicked ? '#ff6f20' : '#3a3a3a'}" (click)="nopoliza()" class="Resultado-text text-style-1 ml-1" ngbDropdownItem>Número de póliza</button>
+                    <button [ngStyle]="{'color': clicked ? '#3a3a3a': '#ff6f20'}" (click)="clienteOp()" class="Resultado-text text-style-1 ml-1" ngbDropdownItem>Nombre de cliente </button>
+                    <button [ngStyle]="{'color': clicked ? '#ff6f20' : '#3a3a3a'}" (click)="nopolizaOp()" class="Resultado-text text-style-1 ml-1" ngbDropdownItem>Número de póliza</button>
                 </div>
             </div>
         </div>
@@ -33,15 +33,15 @@
             <p class="Resultados-de-bsque mt-2 ml-3">Resultado de la búsqueda:</p>
             <table class="ml-3">
                 <tbody>
-                    <tr *ngFor="let cliente of clientesArr ">
-                        <td class="Resultado-text ml-5" [ngStyle]="{'text-decoration': buscarTexto.value ? 'underline': 'none'}"><span [routerLink]="['cliente']">{{cliente.nombre}}</span></td>
-                        <td class="Asegurado" style="text-align: right;">{{cliente.rol}}</td>
+                    <tr *ngFor="let el of clientesArr;">
+                        <td class="Resultado-text ml-5" [ngStyle]="{'text-decoration': buscarTexto.value ? 'underline': 'none'}"><span (click)="guardar(el)">{{el.nombre}}</span></td>
+                        <td class="Asegurado" style="text-align: right;">{{el.rol}}</td>
                     </tr>
                 </tbody>
             </table>
 
-            <div *ngIf="!buscarTexto.value" class="alert alert-info" role="alert">
-                No existen resultados con el término: {{buscarTexto.value}}
+            <div *ngIf="clientesArr.length === 0" class="alert alert-info" role="alert">
+                No existen resultados de la búsqueda: {{buscarTexto.value}}
             </div>
         </div>
     </div>

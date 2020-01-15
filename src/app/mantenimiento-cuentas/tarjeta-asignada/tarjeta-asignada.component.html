@@ -1,5 +1,6 @@
-<div class="flex-container">
-    <p class="Asignar-tarjeta-para"> Asignar Tarjeta para cobro</p>
+<p class="Group salir close" (click)="closeDialog()"><img src="../../../assets/img/group.png"></p>
+<div class="flex-container ">
+    <p class="Asignar-tarjeta-para"> Asignar tarjeta para cobro</p>
     <p class="-Agrega-una-tarjet ">1.Agrega una tarjeta</p>
     <ul>
         <li></li>
@@ -20,7 +21,7 @@
     </mat-form-field>
     <div class="flex-containerT">
         <mat-form-field class="RectangleVencimiento">
-            <input matInput placeholder="Fecha de vencimiento">
+            <input matInput placeholder="Fecha deeciboiento">
         </mat-form-field>
         <mat-form-field class="vacioCVV">
             <input matInput placeholder="CVV" [type]="hide ? 'password' : 'text'">
@@ -29,7 +30,7 @@
             </button>
         </mat-form-field>
     </div>
-    <a class="-Agrega-una-tarjet ">Agregar una tarjeta</a>
+    <a class="-Agrega-una-tarjet ">Agregar una nueva tarjeta</a>
 
     <p class="-Indica-cundo-se">2.Indicar cuando se realizan los cobros</p>
     <p><a class="Cobrar-los">Cobrar los</a>
@@ -37,7 +38,5 @@
             <input matInput placeholder="00">
         </mat-form-field> <a class="de-cada-mes">de cada mes</a>
     </p>
-    <button class="Rectangle-Copy-7 Pagar">AGREGAR TARJETA Y ASIGNAR</button>
-
-
+    <button class="Rectangle-Copy-7" [ngStyle]="{'background-color': clicked ? '#3a3a3a': '#bab9b9'}"><a class="Pagar">AGREGAR TARJETA Y ASIGNAR</a></button>
 </div>

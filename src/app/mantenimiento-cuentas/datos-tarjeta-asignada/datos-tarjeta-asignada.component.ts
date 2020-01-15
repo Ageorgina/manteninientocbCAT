@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { TarjetaAsignadaComponent } from '../tarjeta-asignada/tarjeta-asignada.component';
+import { Tarjeta } from 'src/app/_services';
+
 
 export interface DialogData {
   banco: string;
@@ -18,8 +20,7 @@ export interface DialogData {
   styleUrls: ['./datos-tarjeta-asignada.component.css']
 })
 export class DatosTarjetaAsignadaComponent implements OnInit {
-
-  
+  @Input() tarjetaAsignada: Tarjeta;
 
   constructor(public dialog: MatDialog,) { }
 

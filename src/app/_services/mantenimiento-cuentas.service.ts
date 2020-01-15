@@ -662,13 +662,13 @@ export class MantenimientoCuentasService {
     //  console.log('srv', cliente.polizas[nopoliza]);
     //return cliente.polizas[nopoliza];
    return cliente.polizas.filter(params => {
-     console.log(cliente.polizas)
-     console.log(cliente.params)
+    //  console.log(cliente.polizas)
+    //  console.log(cliente.params)
        if (params.nopoliza === nopoliza) {
-         console.log('srv ',params)
+        //  console.log('srv ',params)
          return params;
      }
-      console.log('srv error ')
+      // console.log('srv error ')
       });
   }
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Cliente, Poliza } from 'src/app/_services';
 
 @Component({
   selector: 'acme-datos-poliza',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./datos-poliza.component.css']
 })
 export class DatosPolizaComponent implements OnInit {
+  @Input() polizainfo: Cliente;
+  @Input() poliza: Poliza;
 
-  constructor() { }
+
+
+  constructor() { 
+  }
 
   ngOnInit() {
   }
+
 
 }

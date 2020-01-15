@@ -1,1 +1,27 @@
-<p>asignacion-tarjeta-exitosa works!</p>
+<p class="Group salir close" (click)="closeDialog()"><img src="../../../assets/img/group.png"></p>
+
+<div class="Rectangle">
+    <p class="Tarjeta-asignada-exi flex-containerTitulo">
+        <mat-icon *ngIf="estado == exitosa" class=" RectangleCard" class="Path" aria-hidden="false">check_circle</mat-icon>
+        <mat-icon *ngIf="estado == fallo" class=" RectangleCard" class="Path" aria-hidden="false">cancel</mat-icon>
+        <br> Tarjeta {{estado}}</p>
+    <br>
+    <a class="Datos-del-cobro">
+        <mat-icon class="RectangleCard mr-3" aria-hidden="false">credit_card</mat-icon>Datos del cobro</a>
+    <div class="flex-container">
+
+        <table *ngIf="estado == exitosa">
+            <tbody>
+                <tr>
+                    <td><a class="Tarjeta ">Tarjeta </a>
+                    </td>
+                    <td class="Banco">HSBC 1234</td>
+                </tr>
+                <tr>
+                    <td><a class="Fecha-de-cobro"> Fecha de cobro</a></td>
+                    <td class="Banco">Los 12 de cada mes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

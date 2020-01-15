@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MantenimientoCuentasService {
+  poliza: any;
 
   constructor(private http: HttpClient) { }
 
@@ -24,27 +25,28 @@ export class MantenimientoCuentasService {
         version: 1,
         desde: '00/00/0000',
         hasta: '00/00/0000',
+        pago: 'Mensual',
         recibos: [
           {
             fraccion: '1/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/01/2019',
             hasta: '15/02/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
             fraccion: '2/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/02/2019',
             hasta: '15/03/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
@@ -55,8 +57,15 @@ export class MantenimientoCuentasService {
             desde: '16/03/2019',
             hasta: '15/04/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
-            cobro: 'Sin asignacion'
+            tarjeta: {
+              estatus: 'Asignada',
+              banco: 'HSBC',
+              titular: 'Juan Raúl García Segura',
+              notarjeta: 1234567891234,
+              vencimiento: 2022,
+              cvv: 763
+            },
+            cobro: '12/03/2019'
           },
           {
             fraccion: '4/6',
@@ -66,8 +75,15 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
-            cobro: 'Sin asignacion'
+            tarjeta: {
+              estatus: 'Asignada',
+              banco: 'HSBC',
+              titular: 'Juan Raúl García Segura',
+              notarjeta: 1234567891234,
+              vencimiento: 2022,
+              cvv: 763
+            },
+            cobro: '12/04/2019'
           },
           {
             fraccion: '5/6',
@@ -77,8 +93,15 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
-            cobro: 'Sin asignacion'
+            tarjeta: {
+              estatus: 'Asignada',
+              banco: 'HSBC',
+              titular: 'Juan Raúl García Segura',
+              notarjeta: 1234567891234,
+              vencimiento: 2022,
+              cvv: 763
+            },
+            cobro: '12/05/2019'
           },
           {
             fraccion: '6/6',
@@ -88,8 +111,15 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
-            cobro: 'Sin asignacion'
+            tarjeta: {
+              estatus: 'Asignada',
+              banco: 'HSBC',
+              titular: 'Juan Raúl García Segura',
+              notarjeta: 1234567891234,
+              vencimiento: 2022,
+              cvv: 763
+            },
+            cobro: '12/06/2019'
           },
         ] 
       },
@@ -101,27 +131,28 @@ export class MantenimientoCuentasService {
         version: 1,
         desde: '00/00/0000',
         hasta: '00/00/0000',
+        pago: 'Mensual',
         recibos: [
           {
             fraccion: '1/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/01/2019',
             hasta: '15/02/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: { estatus: null},
             cobro: null
           },
           {
             fraccion: '2/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/02/2019',
             hasta: '15/03/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
@@ -132,7 +163,9 @@ export class MantenimientoCuentasService {
             desde: '16/03/2019',
             hasta: '15/04/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {
+              estatus: 'Sin asignacion'
+            },
             cobro: 'Sin asignacion'
           },
           {
@@ -143,7 +176,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: { estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -154,7 +187,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -165,7 +198,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
         ] 
@@ -178,27 +211,28 @@ export class MantenimientoCuentasService {
         version: 1,
         desde: '00/00/0000',
         hasta: '00/00/0000',
+        pago: 'Mensual',
         recibos: [
           {
             fraccion: '1/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/01/2019',
             hasta: '15/02/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
             fraccion: '2/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/02/2019',
             hasta: '15/03/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
@@ -209,7 +243,7 @@ export class MantenimientoCuentasService {
             desde: '16/03/2019',
             hasta: '15/04/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -220,7 +254,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -231,7 +265,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -242,7 +276,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
         ] 
@@ -255,27 +289,28 @@ export class MantenimientoCuentasService {
         version: 1,
         desde: '00/00/0000',
         hasta: '00/00/0000',
+        pago: 'Mensual',
         recibos: [
           {
             fraccion: '1/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/01/2019',
             hasta: '15/02/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
             fraccion: '2/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/02/2019',
             hasta: '15/03/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
@@ -286,7 +321,7 @@ export class MantenimientoCuentasService {
             desde: '16/03/2019',
             hasta: '15/04/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta:{estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -297,7 +332,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -308,7 +343,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -319,7 +354,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
         ] 
@@ -332,27 +367,28 @@ export class MantenimientoCuentasService {
         version: 1,
         desde: '00/00/0000',
         hasta: '00/00/0000',
+        pago: 'Mensual',
         recibos: [
           {
             fraccion: '1/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/01/2019',
             hasta: '15/02/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
             fraccion: '2/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/02/2019',
             hasta: '15/03/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
@@ -363,7 +399,7 @@ export class MantenimientoCuentasService {
             desde: '16/03/2019',
             hasta: '15/04/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -374,7 +410,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -385,7 +421,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -396,7 +432,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
         ] 
@@ -409,27 +445,28 @@ export class MantenimientoCuentasService {
         version: 1,
         desde: '00/00/0000',
         hasta: '00/00/0000',
+        pago: 'Mensual',
         recibos: [
           {
             fraccion: '1/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/01/2019',
             hasta: '15/02/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
             fraccion: '2/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/02/2019',
             hasta: '15/03/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
@@ -440,7 +477,7 @@ export class MantenimientoCuentasService {
             desde: '16/03/2019',
             hasta: '15/04/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -451,7 +488,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -462,7 +499,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -473,7 +510,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
         ] 
@@ -486,27 +523,28 @@ export class MantenimientoCuentasService {
         version: 1,
         desde: '00/00/0000',
         hasta: '00/00/0000',
+        pago: 'Mensual',
         recibos: [
           {
             fraccion: '1/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/01/2019',
             hasta: '15/02/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
             fraccion: '2/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/02/2019',
             hasta: '15/03/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
@@ -517,7 +555,7 @@ export class MantenimientoCuentasService {
             desde: '16/03/2019',
             hasta: '15/04/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -528,7 +566,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -539,7 +577,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -550,7 +588,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
         ] 
@@ -563,27 +601,28 @@ export class MantenimientoCuentasService {
         version: 1,
         desde: '00/00/0000',
         hasta: '00/00/0000',
+        pago: 'Mensual',
         recibos: [
           {
             fraccion: '1/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/01/2019',
             hasta: '15/02/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
             fraccion: '2/6',
             norecibo: 123456789123,
-            estatus: 'Pagado (00/000/000)',
+            estatus: 'Pagado',
             monto: 1000,
             desde: '16/02/2019',
             hasta: '15/03/2019',
             conducto: 'Intermediario',
-            tarjeta: null,
+            tarjeta: {estatus: null},
             cobro: null
           },
           {
@@ -594,7 +633,7 @@ export class MantenimientoCuentasService {
             desde: '16/03/2019',
             hasta: '15/04/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -605,7 +644,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -616,7 +655,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus: 'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
           {
@@ -627,7 +666,7 @@ export class MantenimientoCuentasService {
             desde: '16/04/2019',
             hasta: '15/05/2019',
             conducto: 'Intermediario',
-            tarjeta: 'Sin asignacion',
+            tarjeta: {estatus:'Sin asignacion'},
             cobro: 'Sin asignacion'
           },
         ] 
@@ -649,27 +688,38 @@ export class MantenimientoCuentasService {
       nombre: 'Juan García Robledo',
       rol: 'Contratante',
     },
-
+];
+ public bancos: Banco[] = [
+  {
+    nombre: 'Bancomer',
+  },
+  {
+    nombre: 'Banamex',
+  },
+  {
+    nombre: 'HSBC',
+  },
+  {
+    nombre: 'Santander',
+  },
 ];
   getClientes() {
     return this.clientes;
   }
 
   getCliente(idx: number) {
+    // console.log(idx, this.clientes[idx])
     return this.clientes[idx];
   }
   getPoliza(cliente, nopoliza: number) {
-    //  console.log('srv', cliente.polizas[nopoliza]);
-    //return cliente.polizas[nopoliza];
-   return cliente.polizas.filter(params => {
-    //  console.log(cliente.polizas)
-    //  console.log(cliente.params)
-       if (params.nopoliza === nopoliza) {
-        //  console.log('srv ',params)
-         return params;
-     }
-      // console.log('srv error ')
+     cliente.polizas.filter(params => {
+      // tslint:disable-next-line: triple-equals
+      if (params.nopoliza == nopoliza) {
+        this.poliza = params;
+      }
       });
+    // tslint:disable-next-line: no-unused-expression
+     return  this.poliza;
   }
 
   buscarCliente(termino) {
@@ -685,15 +735,17 @@ export class MantenimientoCuentasService {
      }
     return clientesArr;
 
+  }
+
+  buscarPoliza() {
+
     // return this.clientes.filter(params => {
     //   return params.nombre.toLowerCase().includes(termino.toLowerCase());
     // });
   }
-
-  buscarPoliza() {
-      return this.clientes.filter(params => {
-        console.log('buscar Poliza', params)
-      });
+  getBancos() {
+    // console.log('bancossvr',this.bancos)
+    return this.bancos;
   }
 
 }
@@ -716,7 +768,31 @@ export interface Poliza {
   desde: string;
   hasta: string;
   recibos: any[];
+  pago: string;
+}
+export interface Banco {
+nombre: string;
 }
 
+export interface Recibo {
+  fraccion: string;
+  norecibo: number;
+  estatus: string;
+  monto: number;
+  desde: string;
+  hasta: string;
+  conducto: string;
+  tarjeta?: Tarjeta;
+  cobro: string;
+}
+
+export interface Tarjeta {
+  estatus: string;
+  banco: Banco;
+  titular: string;
+  notarjeta: number;
+  vencimiento: number;
+  cvv: number;
+}
 
 

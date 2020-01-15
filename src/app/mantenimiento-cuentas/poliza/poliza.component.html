@@ -8,22 +8,23 @@
             </a>
 
             <a class="Nueva-referencia">
-                Póliza # {{poliza |json}} 
+                Póliza # {{poliza.nopoliza}} 
             </a>
         </ul>
     </div>
     <div>
         <samp class="back">
-            <mat-icon aria-hidden="false" (click)="back()" class="icon-back mr-2">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza ml-1">Recibos de la póliza # {{poliza}}</samp>
+            <mat-icon aria-hidden="false" (click)="back()" class="icon-back mr-2">keyboard_arrow_left </mat-icon><samp class="Recibos-de-la-pliza ml-1">Recibos de la póliza # {{poliza.nopoliza}}</samp>
         </samp>
     </div>
     <div class="flex-container mt-2">
-        <acme-datos-poliza></acme-datos-poliza>
+        <acme-datos-poliza [polizainfo]="cliente" [poliza]="poliza"></acme-datos-poliza>
         <acme-datos-tarjeta-asignada></acme-datos-tarjeta-asignada>
+        <!-- <acme-tarjeta-asignada></acme-tarjeta-asignada>  -->
     </div>
     <br>
 
-    <table class="table text-center Rectangle-Copy-5 ">
+    <table class="table align-content-center Rectangle-Copy-5 ">
         <thead class="thead-light ">
             <tr>
                 <th class="Fraccin">Fracción
@@ -31,8 +32,9 @@
                 </th>
                 <th class="No-de-recibo">No. de recibo</th>
                 <th class="Estatus-del-recibo">Estatus del recibo</th>
-                <th class="Monto">Monto
-                    <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
+                <th class="Monto">Monto <i aria-hidden="false" class="material-icons Arrows_C-Copy-38">
+                        unfold_more
+                        </i>
                 </th>
                 <th class="Periodo-desde">Periodo desde
                     <mat-icon aria-hidden="false" class="Arrows_C-Copy-38"> unfold_more</mat-icon>
@@ -55,12 +57,28 @@
             <tr #vigenciahasta id="vigenciahasta" *ngFor="let recibo of recibos">
                 <td class="FraccinTD">{{recibo.fraccion}}</td>
                 <td class="No-del-reciboTD">{{recibo.norecibo}}</td>
-                <td class="Estatus">{{recibo.estatus}}</td>
-                <td class="-MN"><strong>{{recibo.monto | currency}}</strong> </td>
+                <td class="Estatus">
+                    <a *ngIf="recibo.estatus == 'Pagado'" class="EstatusPagado"> <i class="material-icons">
+                        check_circle_outline
+                        </i>{{recibo.estatus}} (00/000/000)</a>
+                    <a class="Pendiente-exigible" *ngIf="recibo.estatus == 'Pendiente exigible'">
+                        <i class="material-icons">
+                            report_problem
+                            </i>{{recibo.estatus}}</a>
+                    <a *ngIf="recibo.estatus == 'Pendiente'" class="Pendiente">
+                        <i class="material-icons">
+                            schedule
+                            </i> {{recibo.estatus}} </a>
+                </td>
+                <td class="-MN"><strong>{{recibo.monto | currency}} MN</strong> </td>
                 <td class="PeriodoTD">{{recibo.hasta}}</td>
                 <td class="PeriodoTD">{{recibo.desde}}</td>
-                <td class="TarjetaTD">{{recibo.tarjeta}}</td>
-                <td class="Sin-asignacin">{{recibo.cobro}} <button #recibos id="recibos" routerLink="/mantenimiento-cuentas/poliza">VER RECIBOS</button></td>
+                <td class="TarjetaTD">{{recibo.conducto}}</td>
+                <td class="TarjetaTD"><a *ngIf="!recibo.tarjeta.estatus ">-</a>
+                    <a *ngIf="recibo.tarjeta.estatus == 'Sin asignacion'">{{recibo.tarjeta.estatus}}</a>
+                    <span *ngIf="recibo.tarjeta.estatus == 'Asignada'"> <span>{{recibo.tarjeta.notarjeta }}</span> </span>
+                </td>
+                <td class="Sin-asignacin"><a *ngIf="!recibo.cobro">-</a>{{recibo.cobro}}</td>
             </tr>
         </tbody>
     </table>

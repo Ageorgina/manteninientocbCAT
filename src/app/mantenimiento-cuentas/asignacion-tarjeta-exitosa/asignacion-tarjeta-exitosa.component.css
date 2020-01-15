@@ -1,0 +1,115 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.flex-containerTitulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Rectangle {
+    width: 397px;
+    height: 316px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.17);
+    border: solid 1px #e7e7e7;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.Tarjeta-asignada-exi {
+    width: 340px;
+    height: 22px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #002e71;
+}
+
+.Path {
+    width: 29px;
+    height: 29px;
+    border: solid 3.6px rgba(0, 84, 186, 0.31);
+    color: #0054ba;
+    border-radius: 90%;
+}
+
+.Datos-del-cobro {
+    width: 128px;
+    height: 20px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4d4d4d;
+}
+
+.RectangleCard {
+    width: 21px;
+    height: 13px;
+    color: #00337f;
+}
+
+.Tarjeta {
+    width: 130px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #191d28;
+}
+
+.Fecha-de-cobro {
+    width: 130px;
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #191d28;
+}
+
+.Banco {
+    height: 20px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1c2341;
+}
+
+.Group {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.salir {
+    width: 58px;
+    height: 58px;
+}
+
+.close {
+    position: relative;
+}

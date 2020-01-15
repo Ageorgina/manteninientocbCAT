@@ -1,1 +1,46 @@
-<p>asignacion-tarjeta works!</p>
+<p class="Group salir close " (click)="closeDialog()"><img src="../../../assets/img/group.png"></p>
+<div class="flex-container ">
+    <p class="Asignar-tarjeta-para mb-5"> Asignar tarjeta para cobro</p>
+    <!-- <p class="-Agrega-una-tarjet ">1.Agrega una tarjeta</p>
+    <ul>
+        <li></li>
+    </ul> -->
+
+    <form class="RectangleBanco">
+        <mat-form-field>
+            <mat-select placeholder="Banco">
+                <mat-option #op [value]="banco.nombre" *ngFor="let banco of bancos" (click)="bancoselect(op.value)">{{banco.nombre}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="RectangleTitular">
+            <input matInput placeholder="Nombre del titular">
+        </mat-form-field>
+        <mat-form-field class="vacioTarjeta">
+            <input matInput placeholder="Número de tarjeta" [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="flex-containerT">
+            <mat-form-field class="RectangleVencimiento">
+                <input matInput placeholder="Fecha de vencimiento">
+            </mat-form-field>
+            <mat-form-field class="vacioCVV">
+                <input matInput placeholder="CVV" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <a class="-Agrega-una-tarjet ">Agregar una nueva tarjeta</a>
+
+        <p class="-Indica-cundo-se">2.Indicar cuando se realizan los cobros</p>
+        <p><a class="Cobrar-los">Cobrar los</a>
+            <mat-form-field class="RectangleMes" style="text-align: center;">
+                <input matInput placeholder="00">
+            </mat-form-field> <a class="de-cada-mes">de cada mes</a>
+        </p>
+        <button class="Rectangle-Copy-7" [ngStyle]="{'background-color': clicked ? '#3a3a3a': '#bab9b9'}"><a class="Pagar">AGREGAR TARJETA Y ASIGNAR</a></button>
+
+    </form>
+</div>

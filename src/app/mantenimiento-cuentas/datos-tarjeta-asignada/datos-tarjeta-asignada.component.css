@@ -32,7 +32,7 @@
 }
 
 .Rectangle-Copy-7 {
-    width: 193px;
+    width: 79px;
     height: 32px;
     border-radius: 4px;
     background-color: #ff6f20;
@@ -50,6 +50,12 @@
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
+}
+
+.flex-containerDatos {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .flex-container {
